@@ -39,7 +39,7 @@ def login_handle(request):
     if request.method == 'POST':
 
         user = UserInfo.objects.filter(uname = request.POST['username'],upwd = request.POST['pwd'])
-
+        print(user)
         if user:
             return redirect('/user/index/')
 
